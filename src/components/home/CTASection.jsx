@@ -2,18 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FadeIn from '../shared/FadeIn';
 
-import ctaBgImg from '../../assets/Untitled design (8).png';
+import ctaBgImg from '../../assets/557692cc-6fe0-429e-a054-eedd4a456ceb.jpg';
 
 export default function CTASection() {
   return (
     <section className="relative py-32 md:py-48 px-6 md:px-12 lg:px-20 overflow-hidden">
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-full h-full">
         <img
           src={ctaBgImg}
           alt=""
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-80"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background/50" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
