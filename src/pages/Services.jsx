@@ -97,7 +97,7 @@ export default function Services() {
         <div className="max-w-3xl mx-auto text-center">
           <FadeIn>
             <h2 className="font-heading text-3xl md:text-5xl font-light text-foreground leading-tight">
-              Tailored to your requirements.
+              Your requirements, fully considered.
             </h2>
           </FadeIn>
           <FadeIn delay={0.2}>
