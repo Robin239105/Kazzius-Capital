@@ -33,7 +33,10 @@ export default function Footer() {
             <span className="hidden md:inline">·</span>
             <span>All Rights Reserved</span>
             <span className="hidden md:inline">·</span>
-            <Link to="/terms" className="hover:text-foreground transition-colors">Terms & Conditions</Link>
+            <div className="flex gap-4 md:gap-6">
+              <Link to="/terms" className="hover:text-foreground transition-colors">Terms & Conditions</Link>
+              <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+            </div>
             <span className="hidden md:inline">·</span>
             <span>Confidential</span>
           </div>
