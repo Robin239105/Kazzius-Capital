@@ -134,12 +134,12 @@ export default function Navigation() {
                 Login
               </Link>
               
-              <div className="flex flex-col items-center gap-5 w-full">
-                <span className="text-xs tracking-widest uppercase text-muted-foreground">Sign Up</span>
-                <div className="flex items-center justify-between w-full text-xs tracking-widest uppercase">
-                  <a href="https://kazziuscapital.numito.com/onboarding" target="_blank" rel="noopener noreferrer" className="text-brand-purple hover:text-brand-purple/70" onClick={() => setMobileOpen(false)}>Corporate</a>
-                  <span className="text-border">/</span>
-                  <a href="https://kazziuscapital.numito.com/onboarding" target="_blank" rel="noopener noreferrer" className="text-brand-purple hover:text-brand-purple/70" onClick={() => setMobileOpen(false)}>Individual</a>
+              <div className="relative group overflow-hidden border border-brand-purple rounded-sm h-[52px] w-full flex items-center justify-center transition-all duration-300 hover:bg-brand-purple hover:text-white cursor-pointer text-brand-purple">
+                <span className="absolute transition-all duration-300 transform group-hover:-translate-y-16 text-sm tracking-widest uppercase">Sign Up</span>
+                <div className="absolute flex items-center justify-center gap-4 transition-all duration-300 transform translate-y-16 group-hover:translate-y-0 text-xs tracking-wider uppercase w-full">
+                  <a href="https://kazziuscapital.numito.com/onboarding" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors" onClick={() => setMobileOpen(false)}>Corporate</a>
+                  <span>/</span>
+                  <a href="https://kazziuscapital.numito.com/onboarding" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors" onClick={() => setMobileOpen(false)}>Individual</a>
                 </div>
               </div>
             </motion.div>
