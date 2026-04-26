@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -31,6 +32,8 @@ export default function Footer() {
             <span>© {new Date().getFullYear()} Kazzius Capital</span>
             <span className="hidden md:inline">·</span>
             <span>All Rights Reserved</span>
+            <span className="hidden md:inline">·</span>
+            <Link to="/terms" className="hover:text-foreground transition-colors">Terms & Conditions</Link>
             <span className="hidden md:inline">·</span>
             <span>Confidential</span>
           </div>
