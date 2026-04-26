@@ -1,6 +1,7 @@
 import React from 'react';
 import RevealText from '../shared/RevealText';
 import FadeIn from '../shared/FadeIn';
+import philosophyImg from '../../assets/upscalemedia-transformed (2).png';
 
 export default function PhilosophySection() {
   return (
@@ -19,12 +20,21 @@ export default function PhilosophySection() {
             </h2>
           </RevealText>
         </div>
-        <FadeIn delay={0.4} className="mt-16 md:mt-20 flex justify-end">
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-lg">
-            Kazzius Capital serves as a bridge between the world's financial 
-            centers, orchestrating seamless cross-border transactions for 
-            those who require nothing less than absolute excellence.
-          </p>
+        <FadeIn delay={0.4} className="mt-16 md:mt-24 flex flex-col md:flex-row gap-12 md:gap-20 items-center justify-between">
+          <div className="w-full md:w-1/2">
+            <img 
+              src={philosophyImg} 
+              alt="Kazzius Philosophy" 
+              className="w-full h-auto object-cover rounded-sm mix-blend-multiply"
+            />
+          </div>
+          <div className="w-full md:w-1/2 flex justify-start md:justify-end">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-lg">
+              Kazzius Capital serves as a bridge between the world's financial 
+              centers, orchestrating seamless cross-border transactions for 
+              those who require nothing less than absolute excellence.
+            </p>
+          </div>
         </FadeIn>
       </div>
     </section>
