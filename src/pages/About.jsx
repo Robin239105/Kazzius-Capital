@@ -6,7 +6,7 @@ import SectionDivider from '../components/shared/SectionDivider';
 const ABOUT_IMAGE = 'https://media.base44.com/images/public/69ecba6d166be7324ee8f206/5d49f8b27_generated_e20c8a79.png';
 
 const VALUES = [
-  { title: 'Integrity', text: 'The foundation upon which every relationship is built—unwavering, non-negotiable, absolute.' },
+  { title: 'Integrity', text: 'The foundation upon which every relationship is built: unwavering, non-negotiable, absolute.' },
   { title: 'Sovereignty', text: 'We champion our clients\' financial autonomy, enabling capital to flow freely and securely across borders.' },
   { title: 'Legacy', text: 'Built to endure. Every decision, every partnership is designed with permanence and generational vision in mind.' },
 ];
