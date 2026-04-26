@@ -17,6 +17,16 @@ export default function Footer() {
             Access by invitation only.<br />
             Kazzius Capital operates with absolute discretion.
           </p>
+          
+          <div className="mt-12 text-[10px] md:text-xs text-muted-foreground/60 leading-relaxed text-center max-w-4xl mx-auto space-y-4">
+            <p>
+              KAZZIUS CAPITAL GROUP LTD (Company No. 16596167) is a company registered in England and Wales, with its registered office at 20 Wenlock Road, London, England, N1 7GU.
+            </p>
+            <p>
+              Foreign exchange and payment services are provided by Global Currency Exchange Network Ltd T/A GC Partners, which is authorised by the Financial Conduct Authority (FCA) under the Payment Services Regulations 2017 (FCA number: 504346). GC Partners is also registered as a Money Services Business and regulated by HM Revenue & Customs (HMRC) under the Money Laundering Regulations 2017 (Registration number: 12137189). Registered in England and Wales (Company number: 04675786). Registered office: 6th Floor, One New Change, London, England, EC4M 9AF.
+            </p>
+          </div>
+
           <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-xs tracking-widest uppercase text-muted-foreground/50">
             <span>© {new Date().getFullYear()} Kazzius Capital</span>
             <span className="hidden md:inline">·</span>
