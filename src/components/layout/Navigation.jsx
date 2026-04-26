@@ -40,7 +40,7 @@ export default function Navigation() {
             <img
               src={logoImg}
               alt="Kazzius Capital"
-              className="h-[4.5rem] md:h-[5.5rem] w-auto"
+              className="h-[5rem] md:h-[6.25rem] w-auto"
               style={{ mixBlendMode: 'multiply' }}
             />
           </Link>
