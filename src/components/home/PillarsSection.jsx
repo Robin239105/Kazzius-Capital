@@ -5,17 +5,17 @@ const PILLARS = [
   {
     number: '01',
     title: 'Discretion',
-    description: 'Every transaction is conducted with the utmost confidentiality, safeguarding our clients\' financial sovereignty.',
+    description: 'Seamless transfer of capital across jurisdictions with institutional-grade security, compliance, and speed. Designed for entities operating at the intersection of multiple regulatory frameworks.',
   },
   {
     number: '02',
     title: 'Precision',
-    description: 'Meticulous execution across jurisdictions, currencies, and regulatory frameworks without exception.',
+    description: 'Bespoke liquidity architecture for institutions requiring immediate access to capital in foreign markets. Structured to optimize execution, minimize exposure, and maintain absolute discretion.',
   },
   {
     number: '03',
     title: 'Reach',
-    description: 'A global network that transcends borders, connecting capital to opportunity wherever it resides.',
+    description: 'Tailored financial infrastructure designed around the unique requirements of sovereign entities, family offices, and ultra-high-net-worth principals navigating complex cross-border landscapes.',
   },
 ];
 
