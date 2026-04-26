@@ -13,6 +13,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
+import CookiePolicy from './pages/CookiePolicy';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -43,6 +44,7 @@ const AuthenticatedApp = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/cookies" element={<CookiePolicy />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
