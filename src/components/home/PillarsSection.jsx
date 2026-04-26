@@ -10,7 +10,7 @@ const PILLARS = [
   {
     number: '02',
     title: 'Precision',
-    description: 'Meticulous execution across jurisdictions, currencies, and regulatory frameworks—without exception.',
+    description: 'Meticulous execution across jurisdictions, currencies, and regulatory frameworks without exception.',
   },
   {
     number: '03',
