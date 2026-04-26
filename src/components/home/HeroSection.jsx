@@ -53,8 +53,8 @@ export default function HeroSection({ lionLogoUrl, heroImageUrl }) {
             transition={{ duration: 1, delay: 1.4 }}
             className="mt-8 text-sm md:text-base text-muted-foreground tracking-wide leading-relaxed max-w-md ml-auto"
           >
-            Sovereign cross-border payments and bespoke liquidity 
-            solutions for the world's most discerning institutions.
+            Cross-border payments and bespoke liquidity 
+            solutions for private clients and international institutions.
           </motion.p>
         </div>
       </div>
