@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function HeroSection({ lionLogoUrl, heroImageUrl }) {
   return (
-    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden pb-12">
+    <section className="relative min-h-[65vh] md:min-h-screen flex flex-col justify-end overflow-hidden pb-8 md:pb-12">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img
