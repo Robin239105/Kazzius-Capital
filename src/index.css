@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Inter', sans-serif;
+
+    --background: 0 0% 100%;
+    --foreground: 240 11% 8%;
+    --card: 0 0% 97%;
+    --card-foreground: 240 11% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 11% 8%;
+    --primary: 270 44% 19%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 94%;
+    --secondary-foreground: 240 11% 8%;
+    --muted: 240 5% 92%;
+    --muted-foreground: 240 5% 40%;
+    --accent: 276 61% 46%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5% 85%;
+    --input: 240 5% 85%;
+    --ring: 270 44% 19%;
+    --chart-1: 270 44% 19%;
+    --chart-2: 42 32% 53%;
+    --chart-3: 240 5% 55%;
+    --chart-4: 240 11% 20%;
+    --chart-5: 42 32% 40%;
+    --radius: 0.25rem;
+    --sidebar-background: 240 11% 3%;
+    --sidebar-foreground: 240 5% 90%;
+    --sidebar-primary: 270 44% 19%;
+    --sidebar-primary-foreground: 240 5% 90%;
+    --sidebar-accent: 240 11% 8%;
+    --sidebar-accent-foreground: 240 5% 90%;
+    --sidebar-border: 240 11% 12%;
+    --sidebar-ring: 270 44% 19%;
+  }
+
+  .dark {
+    --background: 0 0% 100%;
+    --foreground: 240 11% 8%;
+    --card: 0 0% 97%;
+    --card-foreground: 240 11% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 11% 8%;
+    --primary: 270 44% 19%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 94%;
+    --secondary-foreground: 240 11% 8%;
+    --muted: 240 5% 92%;
+    --muted-foreground: 240 5% 40%;
+    --accent: 276 61% 46%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5% 85%;
+    --input: 240 5% 85%;
+    --ring: 270 44% 19%;
+    --chart-1: 270 44% 19%;
+    --chart-2: 42 32% 53%;
+    --chart-3: 240 5% 55%;
+    --chart-4: 240 11% 20%;
+    --chart-5: 42 32% 40%;
+    --sidebar-background: 240 11% 3%;
+    --sidebar-foreground: 240 5% 90%;
+    --sidebar-primary: 270 44% 19%;
+    --sidebar-primary-foreground: 240 5% 90%;
+    --sidebar-accent: 240 11% 8%;
+    --sidebar-accent-foreground: 240 5% 90%;
+    --sidebar-border: 240 11% 12%;
+    --sidebar-ring: 270 44% 19%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom scrollbar for the sovereign feel */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(0 0% 96%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(240 5% 75%);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(270 44% 35%);
+}
+
+/* Hairline divider utility */
+.hairline {
+  height: 0.5px;
+  background: hsl(240 5% 40% / 0.15);
+}
