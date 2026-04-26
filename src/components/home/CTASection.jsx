@@ -11,9 +11,9 @@ export default function CTASection() {
         <img
           src={ctaBgImg}
           alt=""
-          className="w-full h-full object-cover opacity-80"
+          className="w-full h-full object-cover opacity-40 mix-blend-luminosity"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-background" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
