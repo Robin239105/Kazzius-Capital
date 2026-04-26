@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FadeIn from '../shared/FadeIn';
 
-import ctaBgImg from '../../assets/557692cc-6fe0-429e-a054-eedd4a456ceb.jpg';
+import ctaBgImg from '../../assets/a8242264-a4b8-4cd0-b05f-324ed82319b4.jpg';
 
 export default function CTASection() {
   return (
