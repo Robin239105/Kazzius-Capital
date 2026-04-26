@@ -15,8 +15,8 @@ export default function PhilosophySection() {
         <div className="mt-12 md:mt-16">
           <RevealText>
             <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-light leading-tight text-foreground">
-              Where tradition meets the velocity of modern capital—moving wealth across 
-              borders with the precision and discretion that legacy demands.
+              Where tradition meets the velocity of modern capital, moving wealth across 
+              borders with precision and discretion.
             </h2>
           </RevealText>
         </div>
