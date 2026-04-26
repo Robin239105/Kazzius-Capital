@@ -30,9 +30,9 @@ export default function PhilosophySection() {
           </div>
           <div className="w-full md:w-1/2 flex justify-start md:justify-end">
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-lg">
-              Kazzius Capital serves as a bridge between the world's financial 
-              centers, orchestrating seamless cross-border transactions for 
-              those who require nothing less than absolute excellence.
+              Kazzius Capital serves as a bridge between the world’s financial centres, 
+              orchestrating seamless cross-border transactions for private clients and 
+              institutions who require nothing less than absolute excellence.
             </p>
           </div>
         </FadeIn>
