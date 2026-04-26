@@ -50,24 +50,17 @@ export default function About() {
           <div>
             <FadeIn delay={0.2}>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Kazzius Capital was established to serve as a trusted conduit for 
-                cross-border financial transactions at the highest echelons of 
-                global commerce.
+                Kazzius Capital was established as a trusted conduit for cross-border financial transactions at the highest levels of global commerce.
               </p>
             </FadeIn>
             <FadeIn delay={0.35}>
               <p className="mt-8 text-base md:text-lg text-muted-foreground leading-relaxed">
-                Our clients are not simply customers—they are partners in a shared 
-                pursuit of financial excellence. We operate within a framework of 
-                absolute discretion, meticulous compliance, and bespoke service 
-                architecture that adapts to the complexity each relationship demands.
+                Our clients are not merely customers, but long-term partners in the pursuit of financial excellence. We operate with absolute discretion, rigorous compliance, and a service architecture shaped around the complexity of each relationship.
               </p>
             </FadeIn>
             <FadeIn delay={0.5}>
               <p className="mt-8 text-base md:text-lg text-muted-foreground leading-relaxed">
-                Every engagement is structured with the permanence of institutional 
-                trust, supported by a global network that spans financial centers 
-                across continents.
+                Every engagement is structured on institutional trust and supported by a global network spanning leading financial centres across continents.
               </p>
             </FadeIn>
           </div>
