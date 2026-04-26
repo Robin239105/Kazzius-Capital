@@ -5,7 +5,7 @@ import PillarsSection from '../components/home/PillarsSection';
 import CTASection from '../components/home/CTASection';
 import SectionDivider from '../components/shared/SectionDivider';
 
-import heroBgImg from '../assets/upscalemedia-transformed (1).png';
+import heroBgImg from '../assets/upscalemedia-transformed (3).png';
 
 export default function Home() {
   return (
