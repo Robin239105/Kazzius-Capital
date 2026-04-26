@@ -1,7 +1,7 @@
 import React from 'react';
 import RevealText from '../shared/RevealText';
 import FadeIn from '../shared/FadeIn';
-import philosophyImg from '../../assets/upscalemedia-transformed (2).png';
+import philosophyImg from '../../assets/87a2ac09-a06c-4c89-a330-50b19b77cd18.jpg';
 
 export default function PhilosophySection() {
   return (
@@ -25,7 +25,7 @@ export default function PhilosophySection() {
             <img 
               src={philosophyImg} 
               alt="Kazzius Philosophy" 
-              className="w-full h-auto object-cover rounded-sm mix-blend-multiply"
+              className="w-full h-auto object-cover rounded-sm"
             />
           </div>
           <div className="w-full md:w-1/2 flex justify-start md:justify-end">
