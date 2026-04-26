@@ -154,22 +154,17 @@ export default function Contact() {
 
       <SectionDivider />
 
-      {/* Additional details */}
-      <section className="py-24 md:py-32 px-6 md:px-12 lg:px-20">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+      {/* Landscape Image Placeholder */}
+      <section className="py-12 md:py-20 px-6 md:px-12 lg:px-20">
+        <div className="max-w-6xl mx-auto">
           <FadeIn>
-            <h3 className="font-heading text-xl text-foreground mb-4">General Correspondence</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              inquiries@kazziuscapital.com
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.15}>
-            <h3 className="font-heading text-xl text-foreground mb-4">Registered Office</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Kazzius Capital Ltd.<br />
-              International Financial Centre<br />
-              London, United Kingdom
-            </p>
+            <div className="w-full aspect-[4/3] md:aspect-[21/9] bg-muted/10 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
+                alt="Location placeholder" 
+                className="w-full h-full object-cover opacity-40 grayscale hover:grayscale-0 hover:opacity-80 transition-all duration-1000"
+              />
+            </div>
           </FadeIn>
         </div>
       </section>
