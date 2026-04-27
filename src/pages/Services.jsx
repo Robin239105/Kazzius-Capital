@@ -26,7 +26,7 @@ const SERVICES = [
     title: 'Bespoke Financial Services',
     subtitle: 'ADVISORY',
     description:
-      'Tailored financial infrastructure designed around the unique requirements of sovereign entities, family offices, and ultra-high-net-worth principals navigating complex cross-border landscapes.',
+      'Supporting cross-border financial operations for private clients, family offices, and institutions operating globally.',
   },
 ];
 
