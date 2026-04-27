@@ -166,8 +166,18 @@ $htmlContent = '
 // ==========================================
 // RESEND API CONFIGURATION
 // ==========================================
-// 1. Get your API key from https://resend.com/api-keys
-$resend_api_key = "re_YOUR_RESEND_API_KEY_HERE"; 
+// 1. Securely load API key
+if (file_exists(__DIR__ . '/config.php')) {
+    require_once __DIR__ . '/config.php';
+}
+
+$resend_api_key = defined('RESEND_API_KEY') ? RESEND_API_KEY : getenv('RESEND_API_KEY');
+
+if (empty($resend_api_key) || $resend_api_key === 're_YOUR_RESEND_API_KEY_HERE') {
+    http_response_code(500);
+    echo json_encode(["status" => "error", "message" => "Server configuration error: API key missing."]);
+    exit();
+}
 
 // 2. Set the FROM address. 
 // Since you own kazziuscapital.com, you can send from this address
