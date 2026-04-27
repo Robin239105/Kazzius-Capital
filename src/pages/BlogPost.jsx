@@ -57,10 +57,14 @@ export default function BlogPost() {
         <div className="max-w-3xl mx-auto">
           <FadeIn delay={0.2}>
             <div 
-              className="prose prose-stone prose-invert max-w-none 
-                         prose-headings:font-heading prose-headings:font-light prose-headings:text-foreground
-                         prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:text-lg
-                         prose-blockquote:border-accent prose-blockquote:text-foreground prose-blockquote:font-light"
+              className="prose prose-stone prose-invert max-w-none md:prose-lg lg:prose-xl
+                         prose-headings:font-heading prose-headings:font-light prose-headings:text-foreground prose-headings:tracking-wide prose-headings:mt-16 prose-headings:mb-8
+                         prose-p:text-muted-foreground prose-p:leading-[1.9] prose-p:font-light prose-p:tracking-wide
+                         prose-a:text-accent prose-a:underline prose-a:decoration-accent/30 prose-a:underline-offset-4 hover:prose-a:decoration-accent transition-colors
+                         prose-blockquote:border-l-accent prose-blockquote:font-light prose-blockquote:text-2xl prose-blockquote:leading-relaxed prose-blockquote:text-foreground/90 prose-blockquote:not-italic prose-blockquote:my-12 prose-blockquote:pl-8
+                         prose-li:text-muted-foreground prose-li:font-light prose-li:leading-[1.8] prose-li:tracking-wide
+                         prose-strong:text-foreground prose-strong:font-normal
+                         prose-img:rounded-sm prose-img:shadow-2xl prose-img:my-16"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </FadeIn>
