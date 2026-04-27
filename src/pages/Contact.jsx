@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { motion } from 'framer-motion';
-import contactImg from '../assets/a6a795e6-89ec-42f7-a470-297d20f59a68.jpg';
+import contactImg from '../assets/79f2fff6-3b55-4621-8320-4c985a045dff.jpg';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
