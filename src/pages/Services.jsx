@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSEO } from '../hooks/useSEO';
 import RevealText from '../components/shared/RevealText';
 import FadeIn from '../components/shared/FadeIn';
 import SectionDivider from '../components/shared/SectionDivider';
@@ -32,6 +33,7 @@ const SERVICES = [
 ];
 
 export default function Services() {
+  useSEO({ title: 'Services', description: 'Explore Kazzius Capital\'s institutional services: cross-border payments, currency hedging, forward contracts, and bespoke FX solutions for MSBs and VASPs.' });
   return (
     <>
       {/* Hero */}

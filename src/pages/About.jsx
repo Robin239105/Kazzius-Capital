@@ -1,7 +1,10 @@
 import React from 'react';
+import { useSEO } from '../hooks/useSEO';
+import { Link } from 'react-router-dom';
 import RevealText from '../components/shared/RevealText';
 import FadeIn from '../components/shared/FadeIn';
 import SectionDivider from '../components/shared/SectionDivider';
+import { posts } from '../data/posts';
 
 import aboutImg from '../assets/7a96c086-4298-4416-b235-979849919512.jpg';
 
@@ -13,7 +16,10 @@ const VALUES = [
   { title: 'Legacy', text: 'Built to endure. Every decision, every partnership is designed with permanence and generational vision in mind.' },
 ];
 
+const FEATURED_POSTS = posts.slice(0, 3);
+
 export default function About() {
+  useSEO({ title: 'About Us', description: 'Kazzius Capital was established as a trusted conduit for cross-border financial transactions at the highest levels of global commerce. Learn about our values and mission.' });
   return (
     <>
       {/* Hero */}
@@ -93,6 +99,70 @@ export default function About() {
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      <SectionDivider />
+
+      {/* Featured Insights */}
+      <section className="py-24 md:py-40 px-6 md:px-12 lg:px-20 bg-muted/5">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-20 md:mb-28">
+              <div>
+                <span className="text-xs tracking-widest uppercase text-accent block mb-6">
+                  Institutional Intelligence
+                </span>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-light text-foreground leading-[1.1]">
+                  Latest Thinking.
+                </h2>
+              </div>
+              <p className="text-muted-foreground text-base max-w-md leading-relaxed">
+                Perspectives on global capital movement, regulatory evolution, and the future of cross-border finance.
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-border/40">
+            {FEATURED_POSTS.map((post, i) => (
+              <FadeIn key={post.id} delay={i * 0.15}>
+                <Link
+                  to={`/news/${post.id}`}
+                  className="group relative flex flex-col h-full p-10 md:p-12 border-b md:border-b-0 md:border-r border-border/40 last:border-r-0 last:border-b-0 hover:bg-accent/[0.03] transition-colors duration-700"
+                >
+
+                  <span className="text-[10px] tracking-[0.3em] uppercase text-accent mb-6">
+                    {post.categories[0]}
+                  </span>
+
+                  <h3
+                    className="font-heading text-2xl md:text-3xl font-light text-foreground leading-[1.2] mb-6 group-hover:text-accent transition-colors duration-500"
+                    dangerouslySetInnerHTML={{ __html: post.title }}
+                  />
+
+                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 mb-10 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                    {post.excerpt}
+                  </p>
+
+                  <div className="mt-auto flex items-center text-[10px] tracking-[0.3em] uppercase text-foreground group-hover:translate-x-2 transition-transform duration-500">
+                    Read <span className="ml-3 h-[1px] w-6 bg-accent group-hover:w-10 transition-all duration-500" />
+                  </div>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn delay={0.5}>
+            <div className="mt-20 md:mt-28 text-center">
+              <Link
+                to="/news"
+                className="inline-flex items-center px-14 py-5 border border-border/60 text-[10px] tracking-[0.3em] uppercase text-foreground hover:border-accent hover:text-accent hover:bg-accent/5 transition-all duration-700"
+              >
+                View All Articles
+                <span className="ml-4 h-[1px] w-8 bg-current" />
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
     </>

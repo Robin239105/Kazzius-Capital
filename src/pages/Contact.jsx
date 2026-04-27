@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSEO } from '../hooks/useSEO';
 import { useState } from 'react';
 import RevealText from '../components/shared/RevealText';
 import FadeIn from '../components/shared/FadeIn';
@@ -10,6 +11,7 @@ import { motion } from 'framer-motion';
 import contactImg from '../assets/79f2fff6-3b55-4621-8320-4c985a045dff.jpg';
 
 export default function Contact() {
+  useSEO({ title: 'Contact Us', description: 'Get in touch with Kazzius Capital. Discuss your cross-border payment needs, FX risk management strategy, or institutional liquidity requirements with our specialists.' });
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
     name: '',
