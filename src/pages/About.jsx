@@ -3,7 +3,7 @@ import RevealText from '../components/shared/RevealText';
 import FadeIn from '../components/shared/FadeIn';
 import SectionDivider from '../components/shared/SectionDivider';
 
-import aboutImg from '../assets/Untitled design (3).png';
+import aboutImg from '../assets/92b3768f-fedd-4801-bc58-f9467a5630f2.jpg';
 
 const ABOUT_IMAGE = aboutImg;
 
