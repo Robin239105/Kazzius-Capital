@@ -7,7 +7,6 @@ import logoImg from '@/assets/a4053edf-271a-407b-9e47-48a310d3bbd2.png';
 const NAV_ITEMS = [
   { label: 'About', path: '/about' },
   { label: 'Services', path: '/services' },
-  { label: 'News', path: '/news' },
   { label: 'Contact', path: '/contact' },
 ];
 
