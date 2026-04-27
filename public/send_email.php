@@ -128,7 +128,7 @@ $htmlContent = '
 <body>
     <div class="container">
         <div class="header">
-            <h1>Kazzius Capital</h1>
+            <img src="https://kazziuscapital.com/logo.png" alt="Kazzius Capital" style="height: 65px; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto;">
             <p>Private Inquiry Received</p>
         </div>
         
