@@ -20,9 +20,34 @@ export default function Contact() {
     message: '',
   });
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      const response = await fetch('/send_email.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        const data = await response.json();
+        setError(data.message || 'An error occurred while sending your inquiry.');
+      }
+    } catch (err) {
+      setError('A network error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -142,11 +167,17 @@ export default function Contact() {
 
               <FadeIn delay={0.5}>
                 <div className="pt-6">
+                  {error && (
+                    <p className="text-red-500/80 text-sm mb-4">
+                      {error}
+                    </p>
+                  )}
                   <button
                     type="submit"
-                    className="px-12 py-4 border border-accent/30 text-accent text-xs tracking-widest uppercase transition-all duration-700 hover:bg-accent/10 hover:border-accent/60"
+                    disabled={isSubmitting}
+                    className="px-12 py-4 border border-accent/30 text-accent text-xs tracking-widest uppercase transition-all duration-700 hover:bg-accent/10 hover:border-accent/60 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Submit Inquiry
+                    {isSubmitting ? 'Transmitting...' : 'Submit Inquiry'}
                   </button>
                 </div>
               </FadeIn>
