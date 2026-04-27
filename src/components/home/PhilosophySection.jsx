@@ -1,7 +1,7 @@
 import React from 'react';
 import RevealText from '../shared/RevealText';
 import FadeIn from '../shared/FadeIn';
-import philosophyImg from '../../assets/87a2ac09-a06c-4c89-a330-50b19b77cd18.jpg';
+import philosophyImg from '../../assets/e528105a-b649-4dd1-916d-38e2b6039b54.jpg';
 
 export default function PhilosophySection() {
   return (
