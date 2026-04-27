@@ -3,7 +3,9 @@ import RevealText from '../components/shared/RevealText';
 import FadeIn from '../components/shared/FadeIn';
 import SectionDivider from '../components/shared/SectionDivider';
 
-const ABOUT_IMAGE = 'https://media.base44.com/images/public/69ecba6d166be7324ee8f206/5d49f8b27_generated_e20c8a79.png';
+import aboutImg from '../assets/Untitled design (3).png';
+
+const ABOUT_IMAGE = aboutImg;
 
 const VALUES = [
   { title: 'Integrity', text: 'The foundation upon which every relationship is built: unwavering, non-negotiable, absolute.' },
@@ -43,7 +45,7 @@ export default function About() {
               <img
                 src={ABOUT_IMAGE}
                 alt="Architectural foundation"
-                className="w-full h-full object-cover opacity-70"
+                className="w-full h-full object-cover"
               />
             </div>
           </FadeIn>
