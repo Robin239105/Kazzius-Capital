@@ -49,8 +49,8 @@ $htmlContent = '
     <style>
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background-color: #050505;
-            color: #ffffff;
+            background-color: #f8f8f8;
+            color: #1a1a1a;
             margin: 0;
             padding: 0;
             -webkit-font-smoothing: antialiased;
@@ -58,24 +58,24 @@ $htmlContent = '
         .container {
             max-width: 600px;
             margin: 40px auto;
-            background-color: #0a0a0a;
-            border: 1px solid #1a1a1a;
-            border-top: 4px solid #7B35C1;
+            background-color: #ffffff;
+            border: 1px solid #eaeaea;
+            border-top: 4px solid #7B35C1; /* Kazzius Purple */
             padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
         }
         .header {
             text-align: center;
             padding-bottom: 30px;
-            border-bottom: 1px solid #1a1a1a;
+            border-bottom: 1px solid #eaeaea;
             margin-bottom: 30px;
         }
-        .header h1 {
-            font-size: 24px;
-            font-weight: 300;
-            letter-spacing: 2px;
-            margin: 0;
-            text-transform: uppercase;
-            color: #ffffff;
+        .header img {
+            height: 65px;
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         .header p {
             font-size: 10px;
@@ -86,9 +86,10 @@ $htmlContent = '
             margin-bottom: 0;
         }
         .details-box {
-            background-color: #111111;
+            background-color: #fbfbfb;
             padding: 25px;
             border-radius: 4px;
+            border: 1px solid #f0f0f0;
             margin-bottom: 30px;
         }
         .detail-row {
@@ -102,25 +103,27 @@ $htmlContent = '
             font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #666666;
+            color: #888888;
             margin-bottom: 5px;
         }
         .value {
             font-size: 16px;
-            color: #ffffff;
+            color: #1a1a1a;
             line-height: 1.5;
         }
         .message-box {
             border-left: 2px solid #7B35C1;
             padding-left: 20px;
             margin-top: 10px;
+            color: #333333;
+            background-color: #ffffff;
         }
         .footer {
             margin-top: 40px;
             text-align: center;
             font-size: 11px;
-            color: #444444;
-            border-top: 1px solid #1a1a1a;
+            color: #888888;
+            border-top: 1px solid #eaeaea;
             padding-top: 20px;
         }
     </style>
