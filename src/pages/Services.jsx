@@ -3,6 +3,7 @@ import RevealText from '../components/shared/RevealText';
 import FadeIn from '../components/shared/FadeIn';
 import SectionDivider from '../components/shared/SectionDivider';
 import { Link } from 'react-router-dom';
+import ctaBgImg from '../assets/wmremove-transformed.jpeg';
 
 const SERVICES_IMAGE = 'https://media.base44.com/images/public/69ecba6d166be7324ee8f206/c36224da7_generated_8f8c8a7e.png';
 
@@ -93,23 +94,32 @@ export default function Services() {
       <SectionDivider />
 
       {/* Closing CTA */}
-      <section className="py-32 md:py-48 px-6 md:px-12 lg:px-20">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="relative py-32 md:py-48 px-6 md:px-12 lg:px-20 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full">
+          <img
+            src={ctaBgImg}
+            alt=""
+            className="w-full h-full object-cover object-center opacity-80"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background/50" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <FadeIn>
-            <h2 className="font-heading text-3xl md:text-5xl font-light text-foreground leading-tight">
+            <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-light text-foreground leading-tight">
               Your requirements, fully considered.
             </h2>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p className="mt-8 text-muted-foreground leading-relaxed">
+            <p className="mt-8 text-muted-foreground text-base md:text-lg max-w-xl mx-auto leading-relaxed">
               Each engagement begins with understanding. Reach out to discuss 
               how Kazzius Capital can architect a solution for your specific needs.
             </p>
           </FadeIn>
-          <FadeIn delay={0.35}>
+          <FadeIn delay={0.4}>
             <Link
               to="/contact"
-              className="inline-block mt-12 px-10 py-4 border border-accent/30 text-accent text-xs tracking-widest uppercase transition-all duration-700 hover:bg-accent/10 hover:border-accent/60"
+              className="inline-block mt-12 px-12 py-4 bg-brand-purple text-white text-xs tracking-widest uppercase transition-all duration-700 hover:bg-brand-purple/90 hover:scale-[1.02] shadow-lg shadow-brand-purple/20"
             >
               Begin a Conversation
             </Link>
