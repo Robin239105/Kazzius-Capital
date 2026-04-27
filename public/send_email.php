@@ -170,9 +170,9 @@ $htmlContent = '
 $resend_api_key = "re_YOUR_RESEND_API_KEY_HERE"; 
 
 // 2. Set the FROM address. 
-// If you haven't verified kazziuscapital.com in Resend, use "onboarding@resend.dev"
-// If you have verified it, use something like "noreply@kazziuscapital.com"
-$from_email = "onboarding@resend.dev";
+// Since you own kazziuscapital.com, you can send from this address
+// Note: Make sure kazziuscapital.com is verified in your Resend dashboard!
+$from_email = "privateoffice@kazziuscapital.com";
 // ==========================================
 
 $post_data = json_encode([
