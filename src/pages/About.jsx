@@ -3,7 +3,7 @@ import RevealText from '../components/shared/RevealText';
 import FadeIn from '../components/shared/FadeIn';
 import SectionDivider from '../components/shared/SectionDivider';
 
-import aboutImg from '../assets/Gemini_Generated_Image_iafh8niafh8niafh.jpeg';
+import aboutImg from '../assets/7a96c086-4298-4416-b235-979849919512.jpg';
 
 const ABOUT_IMAGE = aboutImg;
 
