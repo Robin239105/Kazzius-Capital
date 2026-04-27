@@ -31,7 +31,7 @@ export default function CTASection() {
         <FadeIn delay={0.4}>
           <Link
             to="/contact"
-            className="inline-block mt-12 px-10 py-4 border border-accent/30 text-accent text-xs tracking-widest uppercase transition-all duration-700 hover:bg-accent/10 hover:border-accent/60"
+            className="inline-block mt-12 px-12 py-4 bg-brand-purple text-white text-xs tracking-widest uppercase transition-all duration-700 hover:bg-brand-purple/90 hover:scale-[1.02] shadow-lg shadow-brand-purple/20"
           >
             Private Inquiry
           </Link>
