@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { motion } from 'framer-motion';
+import contactImg from '../assets/a6a795e6-89ec-42f7-a470-297d20f59a68.jpg';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -160,9 +161,9 @@ export default function Contact() {
           <FadeIn>
             <div className="w-full aspect-[4/3] md:aspect-[21/9] bg-muted/10 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
-                alt="Location placeholder" 
-                className="w-full h-full object-cover opacity-40 grayscale hover:grayscale-0 hover:opacity-80 transition-all duration-1000"
+                src={contactImg} 
+                alt="Our Headquarters" 
+                className="w-full h-full object-cover transition-all duration-1000"
               />
             </div>
           </FadeIn>
