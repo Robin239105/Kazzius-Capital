@@ -49,51 +49,72 @@ $htmlContent = '
     <style>
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background-color: #f8f8f8;
+            background: linear-gradient(135deg, #f4f4f8 0%, #e8e8f0 100%);
             color: #1a1a1a;
             margin: 0;
-            padding: 0;
+            padding: 40px 20px;
             -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
         }
         .container {
             max-width: 600px;
-            margin: 40px auto;
+            margin: 0 auto;
             background-color: #ffffff;
-            border: 1px solid #eaeaea;
-            border-top: 4px solid #7B35C1; /* Kazzius Purple */
-            padding: 40px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            border-radius: 12px;
+            padding: 0 0 40px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08), 0 5px 15px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+        .top-accent {
+            height: 6px;
+            background: linear-gradient(90deg, #4a1f73 0%, #7B35C1 50%, #9b51e0 100%);
+            width: 100%;
+        }
+        .content-wrapper {
+            padding: 0 45px;
         }
         .header {
             text-align: center;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #eaeaea;
-            margin-bottom: 30px;
+            padding: 45px 0 35px;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 40px;
         }
         .header img {
-            height: 65px;
-            margin-bottom: 15px;
+            height: 70px;
+            margin-bottom: 20px;
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
         .header p {
-            font-size: 10px;
-            letter-spacing: 3px;
+            font-size: 11px;
+            letter-spacing: 4px;
             text-transform: uppercase;
             color: #7B35C1;
-            margin-top: 10px;
-            margin-bottom: 0;
+            font-weight: 600;
+            margin: 0;
         }
         .details-box {
-            background-color: #fbfbfb;
-            padding: 25px;
-            border-radius: 4px;
+            background-color: #fafafa;
+            padding: 30px 35px;
+            border-radius: 10px;
             border: 1px solid #f0f0f0;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            position: relative;
+        }
+        .details-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: #eaeaea;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
         }
         .detail-row {
-            margin-bottom: 15px;
+            margin-bottom: 24px;
         }
         .detail-row:last-child {
             margin-bottom: 0;
@@ -104,62 +125,84 @@ $htmlContent = '
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #888888;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-weight: 600;
         }
         .value {
-            font-size: 16px;
-            color: #1a1a1a;
+            font-size: 17px;
+            color: #222222;
             line-height: 1.5;
         }
+        .message-wrapper {
+            margin-top: 15px;
+        }
         .message-box {
-            border-left: 2px solid #7B35C1;
-            padding-left: 20px;
-            margin-top: 10px;
-            color: #333333;
-            background-color: #ffffff;
+            border-left: 3px solid #7B35C1;
+            padding: 25px 30px;
+            color: #444444;
+            background: linear-gradient(to right, #f9f5fd 0%, #ffffff 100%);
+            border-radius: 0 10px 10px 0;
+            font-size: 16px;
+            line-height: 1.7;
+            font-style: italic;
+            position: relative;
         }
         .footer {
-            margin-top: 40px;
+            margin-top: 50px;
             text-align: center;
             font-size: 11px;
-            color: #888888;
-            border-top: 1px solid #eaeaea;
-            padding-top: 20px;
+            color: #999999;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 30px;
+            line-height: 1.6;
+        }
+        .contact-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: #f4ebfc;
+            color: #7B35C1;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <img src="https://kazziuscapital.com/logo.png" alt="Kazzius Capital" style="height: 65px; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto;">
-            <p>Private Inquiry Received</p>
-        </div>
-        
-        <div class="details-box">
-            <div class="detail-row">
-                <span class="label">Principal / Representative</span>
-                <div class="value"><strong>' . $name . '</strong></div>
+        <div class="top-accent"></div>
+        <div class="content-wrapper">
+            <div class="header">
+                <img src="https://kazziuscapital.com/logo.png" alt="Kazzius Capital">
+                <p>Private Inquiry Received</p>
             </div>
-            <div class="detail-row">
-                <span class="label">Return Contact</span>
-                <div class="value"><a href="mailto:' . $email . '" style="color: #7B35C1; text-decoration: none;">' . $email . '</a></div>
+            
+            <div class="details-box">
+                <div class="detail-row">
+                    <span class="label">Principal / Representative</span>
+                    <div class="value"><strong>' . $name . '</strong></div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Return Contact</span>
+                    <div class="value"><a href="mailto:' . $email . '" class="contact-badge">' . $email . '</a></div>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Nature of Inquiry</span>
+                    <div class="value">' . $type . '</div>
+                </div>
             </div>
-            <div class="detail-row">
-                <span class="label">Nature of Inquiry</span>
-                <div class="value">' . $type . '</div>
-            </div>
-        </div>
 
-        <div class="detail-row">
-            <span class="label">Confidential Message</span>
-            <div class="message-box value">
-                ' . nl2br($message) . '
+            <div class="detail-row message-wrapper">
+                <span class="label">Confidential Message</span>
+                <div class="message-box value">
+                    "' . nl2br($message) . '"
+                </div>
             </div>
-        </div>
 
-        <div class="footer">
-            This communication was securely transmitted via the Kazzius Capital portal.<br>
-            Strictly Confidential &bull; Intended for Private Office Only
+            <div class="footer">
+                This communication was securely transmitted via the Kazzius Capital portal.<br>
+                Strictly Confidential &bull; Intended for Private Office Only
+            </div>
         </div>
     </div>
 </body>
