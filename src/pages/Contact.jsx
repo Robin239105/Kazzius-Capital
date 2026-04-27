@@ -155,17 +155,19 @@ export default function Contact() {
 
       <SectionDivider />
 
-      {/* Full Width Landscape Image */}
-      <section className="py-12 md:py-20 overflow-hidden">
-        <FadeIn>
-          <div className="w-full aspect-[4/3] md:aspect-[21/9] bg-muted/10 overflow-hidden">
-            <img 
-              src={contactImg} 
-              alt="Our Headquarters" 
-              className="w-full h-full object-cover opacity-80 transition-all duration-1000"
-            />
-          </div>
-        </FadeIn>
+      {/* Landscape Image Section */}
+      <section className="py-12 md:py-20 px-6 md:px-12 lg:px-20">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn>
+            <div className="w-full h-auto bg-muted/10 overflow-hidden">
+              <img 
+                src={contactImg} 
+                alt="Our Headquarters" 
+                className="w-full h-auto object-contain opacity-80 transition-all duration-1000"
+              />
+            </div>
+          </FadeIn>
+        </div>
       </section>
     </>
   );
