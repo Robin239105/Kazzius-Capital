@@ -60,12 +60,14 @@ export default function Navigation() {
             ))}
 
             <div className="flex items-center gap-4 ml-4 border-l border-border/50 pl-6 lg:pl-8">
-              <Link
-                to="/login"
+              <a
+                href="https://kazziuscapital.numito.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-xs tracking-widest uppercase px-6 h-[38px] flex items-center justify-center border border-brand-purple text-brand-purple rounded-sm transition-all duration-300 hover:bg-brand-purple hover:text-white"
               >
                 Login
-              </Link>
+              </a>
               
               <div className="relative group overflow-hidden border border-brand-purple rounded-sm h-[38px] w-[200px] flex items-center justify-center transition-all duration-300 hover:bg-brand-purple hover:text-white cursor-default text-brand-purple">
                 <span className="absolute transition-all duration-300 transform group-hover:-translate-y-12 text-xs tracking-widest uppercase">Sign Up</span>
@@ -126,13 +128,15 @@ export default function Navigation() {
               transition={{ delay: NAV_ITEMS.length * 0.1 + 0.2, duration: 0.5 }}
               className="flex flex-col items-center gap-8 mt-4 pt-8 border-t border-border/50 w-2/3 max-w-xs"
             >
-              <Link
-                to="/login"
+              <a
+                href="https://kazziuscapital.numito.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
                 className="w-full flex items-center justify-center text-sm tracking-widest uppercase px-8 py-4 border border-brand-purple text-brand-purple rounded-sm transition-all duration-300 hover:bg-brand-purple hover:text-white"
               >
                 Login
-              </Link>
+              </a>
               
               <div className="relative group overflow-hidden border border-brand-purple rounded-sm h-[52px] w-full flex items-center justify-center transition-all duration-300 hover:bg-brand-purple hover:text-white cursor-pointer text-brand-purple">
                 <span className="absolute transition-all duration-300 transform group-hover:-translate-y-16 text-sm tracking-widest uppercase">Sign Up</span>
