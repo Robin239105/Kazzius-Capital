@@ -163,20 +163,44 @@ $htmlContent = '
 </html>
 ';
 
-// Set content-type header for sending HTML email
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+// ==========================================
+// RESEND API CONFIGURATION
+// ==========================================
+// 1. Get your API key from https://resend.com/api-keys
+$resend_api_key = "re_YOUR_RESEND_API_KEY_HERE"; 
 
-// Additional headers
-$headers .= 'From: Kazzius Portal <noreply@kazziuscapital.com>' . "\r\n";
-$headers .= 'Reply-To: ' . $email . "\r\n";
+// 2. Set the FROM address. 
+// If you haven't verified kazziuscapital.com in Resend, use "onboarding@resend.dev"
+// If you have verified it, use something like "noreply@kazziuscapital.com"
+$from_email = "onboarding@resend.dev";
+// ==========================================
 
-// Send email
-if (mail($to, $subject, $htmlContent, $headers)) {
+$post_data = json_encode([
+    'from' => 'Kazzius Portal <' . $from_email . '>',
+    'to' => [$to],
+    'reply_to' => $email,
+    'subject' => $subject,
+    'html' => $htmlContent
+]);
+
+$ch = curl_init('https://api.resend.com/emails');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'Authorization: Bearer ' . $resend_api_key,
+    'Content-Type: application/json'
+]);
+
+$response = curl_exec($ch);
+$http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
+
+if ($http_code === 200 || $http_code === 201) {
     http_response_code(200);
-    echo json_encode(["status" => "success", "message" => "Inquiry sent successfully."]);
+    echo json_encode(["status" => "success", "message" => "Inquiry sent successfully.", "resend" => json_decode($response)]);
 } else {
     http_response_code(500);
-    echo json_encode(["status" => "error", "message" => "Failed to send inquiry."]);
+    echo json_encode(["status" => "error", "message" => "Failed to send inquiry.", "error_details" => json_decode($response)]);
 }
 ?>
