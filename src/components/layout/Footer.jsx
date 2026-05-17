@@ -19,6 +19,9 @@ export default function Footer() {
             Kazzius Capital operates with absolute discretion.
           </p>
           
+          <p className="mt-4 text-xs md:text-sm tracking-wider text-muted-foreground/80 font-body">
+            Phone Number: <a href="tel:02046289429" className="hover:text-foreground transition-colors font-medium">020 4628 9429</a>
+          </p>
           <div className="mt-12 text-[10px] md:text-xs text-muted-foreground/60 leading-relaxed text-center max-w-4xl mx-auto space-y-4">
             <p>
               KAZZIUS CAPITAL GROUP LTD (Company No. 16596167) is a company registered in England and Wales, with its registered office at 20 Wenlock Road, London, England, N1 7GU.
